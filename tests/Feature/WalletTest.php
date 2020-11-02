@@ -2,9 +2,11 @@
 
 namespace Tests\Feature;
 
+use App\Models\Wallet;
 use Database\Factories\TransactionFactory;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\DB;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
@@ -32,9 +34,11 @@ class ExampleTest extends TestCase
     }
 
     /** @test */
-    public function can_see_transactions()
+    public function can_create_wallet()
     {
-        $tran = Transaction::factory()->count(3)->make();
-        $response = $this->get('/wallet/1');
+//        $wallet = DB::table('wallets')->get();
+//        $response = $this->view('wallet.index', ['wallets' => $wallet]);
+//
+//        $response->dump($wallet);
     }
 }

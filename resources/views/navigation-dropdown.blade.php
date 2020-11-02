@@ -15,6 +15,9 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('wallet.index') }}" :active="request()->routeIs('dashboard')">
+                        {{ __('Wallets') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 
@@ -57,36 +60,39 @@
 
                         <div class="border-t border-gray-100"></div>
 
-                        <!-- Team Management -->
-                        @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Team') }}
-                            </div>
-
-                            <!-- Team Settings -->
-                            <x-jet-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
-                                {{ __('Team Settings') }}
+                        <!-- Can Create Wallet -->
+                        @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
+                            <x-jet-dropdown-link href="/wallet/create">
+                                {{ __('Create New Wallet') }}
                             </x-jet-dropdown-link>
+                        @endcan
 
-                            @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                <x-jet-dropdown-link href="{{ route('teams.create') }}">
-                                    {{ __('Create New Team') }}
-                                </x-jet-dropdown-link>
-                            @endcan
+                        <!-- Team Management -->
+{{--                        @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())--}}
+{{--                            <div class="block px-4 py-2 text-xs text-gray-400">--}}
+{{--                                {{ __('Manage Team') }}--}}
+{{--                            </div>--}}
 
-                            <div class="border-t border-gray-100"></div>
+{{--                            <!-- Team Settings -->--}}
+{{--                            <x-jet-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">--}}
+{{--                                {{ __('Team Settings') }}--}}
+{{--                            </x-jet-dropdown-link>--}}
 
-                            <!-- Team Switcher -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Switch Teams') }}
-                            </div>
+{{--                            --}}
 
-                            @foreach (Auth::user()->allTeams() as $team)
-                                <x-jet-switchable-team :team="$team" />
-                            @endforeach
+{{--                            <div class="border-t border-gray-100"></div>--}}
 
-                            <div class="border-t border-gray-100"></div>
-                        @endif
+{{--                            <!-- Team Switcher -->--}}
+{{--                            <div class="block px-4 py-2 text-xs text-gray-400">--}}
+{{--                                {{ __('Switch Teams') }}--}}
+{{--                            </div>--}}
+
+{{--                            @foreach (Auth::user()->allTeams() as $team)--}}
+{{--                                <x-jet-switchable-team :team="$team" />--}}
+{{--                            @endforeach--}}
+
+{{--                            <div class="border-t border-gray-100"></div>--}}
+{{--                        @endif--}}
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
