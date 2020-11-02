@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WalletController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +31,12 @@ Route::get('/wallet/rename', function (){
     return view('wallet.rename');
 });
 Route::put('/wallet/rename', [WalletController::class, 'rename'])->name('wallet.rename');
-
 Route::delete('/wallet/delete', [WalletController::class, 'delete'])->name('wallet.delete');
+Route::get('/wallet/{id}', [WalletController::class, 'show'])->name('wallet.show');
 
-Route::get('/wallet/{id}', function () {
-    return view('wallet.show');
-})->name('wallet.show');
+Route::post('/transaction/store', [TransactionController::class, 'store'])->name('transaction.store');
+Route::put('/transaction/setAsFraudulent', [TransactionController::class, 'setAsFraudulent']);
+Route::delete('/transaction/delete', [TransactionController::class, 'delete'])->name('transaction.delete');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

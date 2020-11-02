@@ -15,8 +15,12 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id');
             $table->integer('wallet_id');
             $table->integer('amount');
+            $table->string('incoming_from');
+            $table->string('outgoing_to');
+            $table->boolean('is_fraudulent');
             $table->timestamps();
         });
     }
