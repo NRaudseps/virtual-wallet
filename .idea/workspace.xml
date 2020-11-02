@@ -11,14 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="558e4419-ba01-48f5-a3c1-ffcd83549e0c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/virtual-wallet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/virtual-wallet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TransactionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TransactionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WalletController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/WalletController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/TransactionsFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TransactionFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/WalletFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/WalletFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_28_120307_create_transactions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_28_120307_create_transactions_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/wallet/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/wallet/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/WalletTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/WalletTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +153,9 @@
       <path value="$PROJECT_DIR$/vendor/mobiledetect/mobiledetectlib" />
       <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jPfNUPT2LM42WfXMtZxpQpFJYA" />
@@ -192,7 +197,7 @@
       <workItem from="1603710608500" duration="1379000" />
       <workItem from="1603883576526" duration="5122000" />
       <workItem from="1604326886534" duration="1545000" />
-      <workItem from="1604332375498" duration="18653000" />
+      <workItem from="1604332375498" duration="26257000" />
     </task>
     <servers />
   </component>
@@ -219,10 +224,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="591" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603886806760" />
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604344342091">
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604354150628">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1604344342091" />
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1604354150628" />
     <state x="876" y="331" width="230" height="452" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#function0" timestamp="1604347641677">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

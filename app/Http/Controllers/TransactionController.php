@@ -15,7 +15,8 @@ class TransactionController extends Controller
             'wallet_id' => $_POST['id'],
             'amount' => $_POST['amount']*100,
             'incoming_from' => 'Me',
-            'outgoing_to' => $_POST['send_to']
+            'outgoing_to' => $_POST['send_to'],
+            'is_fraudulent' => false
         ]);
 
         return redirect()->route('wallet.show', ['id' => $_POST['id']]);

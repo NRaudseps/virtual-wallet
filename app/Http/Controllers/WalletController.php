@@ -6,23 +6,21 @@ use Faker\Provider\Person;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\Wallet;
+use App\Models\Transaction;
 
 class WalletController extends Controller
 {
     public function index()
     {
-        $wallets = DB::table('wallets')
-            ->where('user_id', Auth::id())
-            ->get();
+        $wallets = Wallet::all();
 
         return view('wallet.index', ['wallets' => $wallets]);
     }
 
     public function show($id)
     {
-        $transactions = DB::table('transactions')
-            ->where('wallet_id', $id)
-            ->get();
+        $transactions = Transaction::all()->where('wallet_id', $id);
 
         $sumOfIncoming = 0;
         $sumOfOutgoing = 0;
